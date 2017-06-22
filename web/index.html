@@ -1,0 +1,130 @@
+<html>
+	<head>
+		
+	</head>		
+
+	<body>
+		<b> bold </b> text <br>
+		<em>italic</em> text <br>
+		<strong>strong </strong> text <br>
+
+
+		<a href="https://google.com"> google.com </a> <br><br>
+
+		<select> drop test
+			<option value="head">Head</option>
+			<option value="body">Body</option>
+			<option value="leg">Leg</option>
+		</select><br><br>
+
+		<menu>
+			<menuitem value="test1"> menu item 1 using br
+				<select> drop test
+					<option value="head">Head</option>
+					<option value="body">Body</option>
+					<option value="leg">Leg</option>
+				</select>
+			</menuitem>
+			<br>
+
+			<menuitem value="test2"> menu item 2 using br
+				<select> drop test
+					<option value="hand">Hand</option>
+					<option value="foot">Foot</option>
+					<option value="?">?</option>
+				</select>
+			</menuitem>
+		</menu>
+		<br><br>
+
+		<menu>
+			<div>
+				<menuitem value="test1"> Menu item 1 using div
+					<select> drop test
+						<option value="head">Head</option>
+						<option value="body">Body</option>
+						<option value="leg">Leg</option>
+					</select>
+				</menuitem>
+			</div>
+				
+			<div>
+				<menuitem value="test2"> Menu item 2 using div
+					<select> drop test
+						<option value="hand">Hand</option>
+						<option value="foot">Foot</option>
+						<option value="?">?</option>
+					</select>
+				</menuitem>
+			</div>
+		</menu><br><br>
+
+
+	<table>
+		<tbody>
+			<tr>
+				<td><b>Table_Menu 1</b> </td>
+				<td><em>Table_Menu 2</em> </td>
+				<td><strong>Table_Menu 3</strong></td>
+			</tr>
+			<tr>
+				<td>
+					<menuitem value="menu1"> 
+						<select> drop test
+							<option value="head">Head</option>
+							<option value="body">Body</option>
+							<option value="leg">Leg</option>
+						</select>
+					</menuitem>
+				</td>
+				<td>
+					<menuitem value="menu2"> 
+						<select> drop test
+							<option value="hand">Hand</option>
+							<option value="foot">Foot</option>
+							<option value="?">?</option>
+						</select>
+					</menuitem>
+				</td>
+				<td>
+					<menuitem value="menu3">
+						<select>
+							<option value="option1">Option1</option>
+							<option value="option2">Option2</option>
+						</select>
+					</menuitem>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="range" min="0" max="10" value="8" step="1" onchange="showValue(this.value)"/>
+					
+				</td>
+				<td>
+					<input type="range" min="0" max="10" value="4" step="1" onchange="showValue(this.value)"/>
+					
+				</td>
+				<td>
+					<input type="range" min="0" max="10" value="2" step="1" onchange="showValue(this.value)"/>
+					
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span id="range"></span>
+				</td>
+				<td>
+					<span id="range">5</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<script type="text/javascript">
+	function showValue(newValue){
+		document.getElementById("range").innerHTML=newValue;
+	}
+	</script>
+
+	</body>
+</html> 
