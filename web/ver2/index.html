@@ -1,0 +1,88 @@
+<html>
+	<head></head>
+
+
+<!-- I am still trying to refine the drop menu for the website
+	The value update for the range input is still not fully functioning properly,
+	and I will also try to get the drop menu to be grouped to the range input as well
+ -->
+
+<body>
+<table>
+	<tbody>
+
+	<tr>
+		<td><b>Body Part 1</b> </td>
+		<td><em>Body Part 2</em> </td>
+		<td><strong>Body Part 3</strong></td>
+	</tr>
+
+	<tr>
+		<td>
+			<menu type="context" id="body_pt">
+				<menuitem>
+					<select>
+						<option value="head">Head</option>
+						<option value="torso">Torso</option>
+					</select>
+				</menuitem>
+			</menu>
+		</td>
+		<td>
+			<menu type="context" id="body_pt">
+				<menuitem>
+					<select>
+						<option value="hands">Hands</option>
+						<option value="feet">Feet</option>
+					</select>
+				</menuitem>
+			</menu>
+		</td>
+		<td>
+			<menu type="context" id="body_pt">
+				<menuitem>
+					<select>
+						<option value="arms">Arms</option>
+						<option value="legs">Legs</option>
+					</select>
+				</menuitem>
+			</menu>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<label for="body_pt1"><b>Body Part 1</b></label><br>
+			<input id="body_pt1" type="range" min="0" max="10" value="5" step="1" onchange="showValue(this.value)"/>
+		</td>
+		<td>
+			<label for="body_pt2"><em>Body Part 2</em></label><br>
+			<input id="body_pt2" type="range" min="0" max="10" value="5" step="1" onchange="showValue(this.value)"/>
+		</td>
+		<!-- <td>
+			<label for="body_pt3" value="Body Part 3"></label><br>
+			<input id="body_pt3" type="range" min="0" max="10" value="5" step="1" onchange="showValue(this.value)"/>
+		</td> -->
+	</tr>
+
+	<tr>
+		<td>
+			<span id="range">5</span>
+		</td>
+		<td>
+			<span id="range">5</span>
+		</td>
+	</tr>
+
+	</tbody>
+</table>
+
+<script type="text/javascript">
+	// function showLabel(newLabel){
+	// 	document.getElementById("body_pt").innerHTML=newLabel;
+	// }
+	function showValue(newValue){
+		document.getElementById("range").innerHTML=newValue;
+	}
+</script>
+</body>
