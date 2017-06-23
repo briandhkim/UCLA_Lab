@@ -19,55 +19,48 @@
 
 	<tr>
 		<td>
-			<menu type="context" id="body_pt">
-				<menuitem>
-					<select>
-						<option value="head">Head</option>
-						<option value="torso">Torso</option>
+			<menu type="context" onchange="showLabel(body1.value)" onclick="showLabel(body1.value)">
+				<menuitem label="Body_Main">
+					<select id="body1">
+						<option style="display:none"> --select-- </option>
+						<option value="Head">Head</option>
+						<option value="Torso">Torso</option>
 					</select>
 				</menuitem>
 			</menu>
 		</td>
 		<td>
-			<menu type="context" id="body_pt">
-				<menuitem>
-					<select>
-						<option value="hands">Hands</option>
-						<option value="feet">Feet</option>
+			<menu type="context" onchange="showLabel(body2.value)" onclick="showLabel(body2.value)">
+				<menuitem label="Body_Extrm">
+					<select id="body2">
+						<option style="display:none"> --select-- </option>
+						<option value="Hands">Hands</option>
+						<option value="Feet">Feet</option>
 					</select>
 				</menuitem>
 			</menu>
 		</td>
 		<td>
-			<menu type="context" id="body_pt">
-				<menuitem>
-					<select>
-						<option value="arms">Arms</option>
-						<option value="legs">Legs</option>
+			<menu type="context" onchange="showLabel(body3.value)" onclick="showLabel(body3.value)">
+				<menuitem label="Body_Limbs">
+					<select id="body3">
+						<option style="display:none"> --select-- </option>
+						<option value="Arms">Arms</option>
+						<option value="Legs">Legs</option>
 					</select>
 				</menuitem>
 			</menu>
 		</td>
 	</tr>
 
-	<tr>
-		<td>
-			<label for="body_pt1"><b>Body Part 1</b></label><br>
-			<input id="body_pt1" type="range" min="0" max="10" value="5" step="1" onchange="showValue(this.value)"/>
-		</td>
-		<td>
-			<label for="body_pt2"><em>Body Part 2</em></label><br>
-			<input id="body_pt2" type="range" min="0" max="10" value="5" step="1" onchange="showValue(this.value)"/>
-		</td>
-		<!-- <td>
-			<label for="body_pt3" value="Body Part 3"></label><br>
-			<input id="body_pt3" type="range" min="0" max="10" value="5" step="1" onchange="showValue(this.value)"/>
-		</td> -->
-	</tr>
+
 
 	<tr>
 		<td>
-			<span id="range">5</span>
+			<span id="context">body</span>
+		</td>
+		<td>
+			<input id="body_pt" type="range" min="0" max="10" value="5" step="1" onchange="showValue(this.value)"/>
 		</td>
 		<td>
 			<span id="range">5</span>
@@ -78,9 +71,9 @@
 </table>
 
 <script type="text/javascript">
-	// function showLabel(newLabel){
-	// 	document.getElementById("body_pt").innerHTML=newLabel;
-	// }
+	function showLabel(newLabel){
+		document.getElementById("context").innerHTML=newLabel;
+	}
 	function showValue(newValue){
 		document.getElementById("range").innerHTML=newValue;
 	}
