@@ -6,21 +6,30 @@
 	The value update for the range input is still not fully functioning properly,
 	and I will also try to get the drop menu to be grouped to the range input as well
  -->
+<br><br>
+The labels for each selection are in different style just to get an idea of what different text
+styles look like
+<br><br>
+
+
+<div>
+Instead of having individual sliders for each selection, <br> one range slider with responsive result element was added <br> The body label to the left of the range slider also responds <br> to different selector changes
+<br><br></div> 
 
 <body>
 <table>
 	<tbody>
 
-	<tr>
+	<!-- <tr>
 		<td><b>Body Part 1</b> </td>
 		<td><em>Body Part 2</em> </td>
 		<td><strong>Body Part 3</strong></td>
-	</tr>
+	</tr> -->
 
 	<tr>
 		<td>
 			<menu type="context" onchange="showLabel(body1.value)" onclick="showLabel(body1.value)">
-				<menuitem label="Body_Main">
+				<menuitem label="Body_Main"> <b>Body Main</b> <br>
 					<select id="body1">
 						<option style="display:none"> --select-- </option>
 						<option value="Head">Head</option>
@@ -31,7 +40,7 @@
 		</td>
 		<td>
 			<menu type="context" onchange="showLabel(body2.value)" onclick="showLabel(body2.value)">
-				<menuitem label="Body_Extrm">
+				<menuitem label="Body_Extrm"> <em>Body_Extrm</em> <br>
 					<select id="body2">
 						<option style="display:none"> --select-- </option>
 						<option value="Hands">Hands</option>
@@ -42,7 +51,7 @@
 		</td>
 		<td>
 			<menu type="context" onchange="showLabel(body3.value)" onclick="showLabel(body3.value)">
-				<menuitem label="Body_Limbs">
+				<menuitem label="Body_Limbs"> <strong>Body Limbs</strong><br>
 					<select id="body3">
 						<option style="display:none"> --select-- </option>
 						<option value="Arms">Arms</option>
