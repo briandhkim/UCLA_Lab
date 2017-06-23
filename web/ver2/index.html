@@ -1,5 +1,7 @@
 <html>
-	<head></head>
+	<head>
+		<link href="css/main.css" rel="stylesheet" type="text/css"/>
+	</head>
 
 
 <!-- I am still trying to refine the drop menu for the website
@@ -29,7 +31,7 @@ Instead of having individual sliders for each selection, <br> one range slider w
 	<tr>
 		<td>
 			<menu type="context" onchange="showLabel(body1.value)" onclick="showLabel(body1.value)">
-				<menuitem label="Body_Main"> <b>Body Main</b> <br>
+				<menuitem align="center" label="Body_Main">Body Main<br>
 					<select id="body1">
 						<option style="display:none"> --select-- </option>
 						<option value="Head">Head</option>
@@ -40,7 +42,7 @@ Instead of having individual sliders for each selection, <br> one range slider w
 		</td>
 		<td>
 			<menu type="context" onchange="showLabel(body2.value)" onclick="showLabel(body2.value)">
-				<menuitem label="Body_Extrm"> <em>Body_Extrm</em> <br>
+				<menuitem label="Body_Extrm">Body Extrm<br>
 					<select id="body2">
 						<option style="display:none"> --select-- </option>
 						<option value="Hands">Hands</option>
@@ -51,7 +53,7 @@ Instead of having individual sliders for each selection, <br> one range slider w
 		</td>
 		<td>
 			<menu type="context" onchange="showLabel(body3.value)" onclick="showLabel(body3.value)">
-				<menuitem label="Body_Limbs"> <strong>Body Limbs</strong><br>
+				<menuitem label="Body_Limbs">Body Limbs<br>
 					<select id="body3">
 						<option style="display:none"> --select-- </option>
 						<option value="Arms">Arms</option>
@@ -65,13 +67,13 @@ Instead of having individual sliders for each selection, <br> one range slider w
 
 
 	<tr>
-		<td>
-			<span id="context">body</span>
+		<td align="center">
+			<span id="context">Body</span>
 		</td>
 		<td>
 			<input id="body_pt" type="range" min="0" max="10" value="5" step="1" onchange="showValue(this.value)"/>
 		</td>
-		<td>
+		<td align="center">
 			<span id="range">5</span>
 		</td>
 	</tr>
